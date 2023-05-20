@@ -17,4 +17,16 @@ public class SearchPage {
     public List<WebElement> getResults(){
         return driver.findElements(pageConstants.item_name);
     }
+
+    public ProductPage goToProduct(){
+        WebElement first_results = driver.findElements(pageConstants.item_name).get(0);
+        first_results.click();
+        return new ProductPage(driver);
+    }
+
+    public ProductPage saveProduct(){
+        WebElement first_results = driver.findElements(pageConstants.save_icon).get(0);
+        first_results.click();
+        return new ProductPage(driver);
+    }
 }

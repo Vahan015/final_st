@@ -4,5 +4,5 @@ import org.openqa.selenium.By;
 
 public class SearchPageConstants {
     public By item_name = By.className("overflowFade_zrNEl");
-    public By item_icon = By.className("product-grid-item");
+    public By save_icon = By.className("saveForLater_mm1gc");
 }

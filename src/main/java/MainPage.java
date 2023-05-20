@@ -20,4 +20,14 @@ public class MainPage {
         driver.findElement(pageConstants.search_field).sendKeys(searchText, Keys.ENTER);
         return new SearchPage(driver);
     };
+
+    public SavedPage goToSavedItems(){
+        driver.findElement(pageConstants.heart_icon).click();
+        return new SavedPage(driver);
+    }
+
+    public RegisterPage goToRegisterPage(){
+        driver.findElement(pageConstants.register_icon).click();
+        return new RegisterPage(driver);
+    }
 }
